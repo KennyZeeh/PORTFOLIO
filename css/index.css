@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    color: #ffff;    
+}
+
+#container{
+    display: flex;
+    /* height: auto; */
+    height: 100vh;
+    width: 100%;
+}
+
+#header{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    background-color: black;
+    text-align: center;
+    padding: 5%;
+}
+
+#comLink{
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+#bodyHeader{
+    background-image: linear-gradient(rgba(0,0,0,0.26), rgba(0,0,0,0.24)), url(../img/bg-image.jpeg);
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+    padding-top: 20%;
+    line-height: 1.3;
+}
+
+@keyframes moveLetter{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#bodyHeader h3{
+    margin-bottom: 20px;
+    animation: moveLetter 1s infinite;
+}
+
+a{
+    text-decoration: none;
+    color: #ffff;
+}
+
+a:hover{
+    color: red;
+    transform: scale(1.5);
+}
+
+#prof{
+    color: red;
+}
+
+span{
+    color: red;
+}
+
+button{
+    background-color: red;
+    color: #ffff;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover{
+    color: white;
+    transform: scale(1.1);
+    font-size: 18px;
+}
+
+@media screen and (max-width: 400px){
+    #container{
+        display: flex;
+        height: 100vh;
+    }
+
+    #comName h1{
+        font-size: 16px;
+    }
+
+    #header{
+        row-gap: 20px;
+        padding: 25% 3%;
+        font-size: 10px;
+        width: 20%;
+        height: auto;
+    }
+
+    #bodyHeader{
+        padding-top: 20%;   
+        font-size: 14px;
+        align-items: center;
+    }
+}
